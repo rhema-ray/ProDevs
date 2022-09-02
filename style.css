@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@600;700&family=Ubuntu:wght@700&display=swap");
+
+:root {
+  --light-lime: #abd699;
+  --fresh-lemon: #ffe260;
+  --teal: hsl(167, 44%, 62%);
+  --mint: hsl(134, 24%, 82%);
+  --navy: hsl(245, 56%, 16%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 62.5%;
+}
+
+/* RESETS */
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+/* HEADER */
+.overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(black, transparent);
+}
+
+.overlay {
+  display: block;
+}
+
+nav {
+  display: flex;
+  position: relative;
+  background-color: var(--white);
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 2rem 15rem 2rem 4rem;
+}
+
+nav ul {
+
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.logo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+  color: var(--navy);
+}
+
+nav ul li a {
+  color: var(--navy);
+}
+
+li {
+    position: relative;
+}
+
+li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--navy);
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    height: 3px;
+    left: 0;
+    right: 0;
+    bottom: -28px;
+    transition: opacity ease-in-out 300ms;
+}
+
+li:hover::before {
+    opacity: 1;
+}
+
+a:hover {
+  color: #000;
+  background: #fff;
+  border-radius: .5rem;
+}
+
+/* HAMBURGER MENU STYLING */
+.toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  width: 2.6rem;
+  height: .3rem;
+  background-color: #1f1f1f;
+  transition: all ease-in-out 200ms;
+  transform-origin: 0.15rem 0.15rem;
+}
+
+.toggle span:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.open .toggle > span:first-child {
+  transform: rotate(45deg);
+}
+
+.open .toggle > span:nth-child(2) {
+  opacity: 0;
+}
+
+.open .toggle > span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* ANIMATIONS */
+.has-fade {
+  visibility: hidden;
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fade-out 200ms ease-in-out forwards;
+}
+
+/* MOBILE MENU TOOGLE */
+.menu {
+  position: absolute;
+  width: calc(100% - 8rem);
+  background: white;
+  padding: 2.6rem;
+  margin: 2.4rem 4rem;
+  border-radius: .5rem;
+}
+
+.menu a {
+  display: block;
+  color: var(--navy);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
+
+@media (max-width: 800px) {
+  nav {
+    padding-right: 4rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+}
+
+/* THE EQUILVALENT PADDING LEFT AND RIGHT OF THE NAV TO THE BODY */
+main {
+  padding: 0 4rem;
+}
