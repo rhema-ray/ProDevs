@@ -192,9 +192,11 @@ a:hover {
 .menu {
   position: absolute;
   width: calc(100% - 5rem);
+  left: 50%;
+  transform: translateX(-50%);
   background: white;
   padding: 2.6rem;
-  margin: 2.4rem 4rem;
+  margin-top: 2.4rem;
   border-radius: .5rem;
 }
 
