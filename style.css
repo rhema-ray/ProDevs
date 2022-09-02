@@ -191,7 +191,7 @@ a:hover {
 /* MOBILE MENU TOOGLE */
 .menu {
   position: absolute;
-  width: calc(100% - 8rem);
+  width: calc(100% - 5rem);
   background: white;
   padding: 2.6rem;
   margin: 2.4rem 4rem;
@@ -223,5 +223,5 @@ a:hover {
 
 /* THE EQUILVALENT PADDING LEFT AND RIGHT OF THE NAV TO THE BODY */
 main {
-  padding: 0 4rem;
+  padding: 0 2.5rem;
 }
