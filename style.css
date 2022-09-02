@@ -209,7 +209,7 @@ a:hover {
 
 @media (max-width: 800px) {
   nav {
-    padding: 2.5rem;
+    padding: 2rem 2.5rem;
   }
 
   nav ul {
