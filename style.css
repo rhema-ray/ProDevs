@@ -30,7 +30,6 @@ a {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  background-color: hsla(102, 43%, 72%, 1);
 }
 
 .noscroll {
@@ -55,13 +54,11 @@ body {
 nav {
   display: flex;
   position: relative;
-  /* background-color: var(--white); */
+  background-color: var(--white);
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   padding: 2rem 15rem 2rem 4rem;
-  background: hsla(102, 43%, 72%, 1);
-
 }
 
 nav ul {
@@ -94,13 +91,12 @@ li::before {
     display: block;
     position: absolute;
     background-color: var(--navy);
-    border-radius: 5px;
+    border-radius: 8px 8px 0 0;
     opacity: 0;
     height: 3px;
     left: 0;
     right: 0;
-    /* bottom: -28px; */
-    bottom: -5px;
+    bottom: -28px;
     transition: opacity ease-in-out 300ms;
 }
 
@@ -110,7 +106,7 @@ li:hover::before {
 
 a:hover {
   color: #000;
-  /* background: #fff; */
+  background: #fff;
   border-radius: .5rem;
 }
 
@@ -229,68 +225,5 @@ a:hover {
 
 /* THE EQUILVALENT PADDING LEFT AND RIGHT OF THE NAV TO THE BODY */
 main {
-  padding: 5rem 10rem 0;
+  padding: 0 2.5rem;
 }
-
-.hero-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.right {
-  align-self: flex-end;
-}
-
-.wrapper {
-  height: 6rem;
-  display: block;
-  overflow-y: hidden;
-}
-
-
-
-.text {
-  font-size: 5rem;
-  font-weight: 700;
-  position: relative;
-  animation: slide-up-2 1.5s;
-}
-
-
-
-@keyframes slide-up {
-  from {
-    transform: translateY(5rem);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-.wrapper-2 {
-  height: 400px;
-  display: block;
-  overflow-y: hidden;
-}
-
-.wrapper-2 > img {
-  height: 400px;
-}
-
-.text-2 {
-  position: relative;
-  animation: slide-up-2 2s;
-}
-
-@keyframes slide-up-2 {
-  from {
-    transform: translateY(400px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-
-
