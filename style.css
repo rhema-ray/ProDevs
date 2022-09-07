@@ -227,3 +227,72 @@ a:hover {
 main {
   padding: 0 2.5rem;
 }
+
+
+
+
+/* ABOUT US SECTION */
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100vw;
+  background-color: #fff;
+}
+
+.wrapper {
+  display: inline-flex;
+  padding: 1%;
+  justify-content: center;
+  gap: 10px;
+  padding-right: 45px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.wrapper .static-text {
+  color: #000;
+  font-size: 52px;
+  font-weight: 400;
+}
+
+.wrapper .dynamic-text {
+  margin-left: 5px;
+  margin-top: 5px;
+  line-height: 52px;
+  height: 52px;
+  overflow: hidden;
+}
+
+.dynamic-text li {
+  color: #75c9b7;
+  list-style: none;
+  font-size: 52px;
+  position: relative;
+  top: 0;
+  animation: slide 15s ease infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-text li span {
+  position: relative;
+}
+
+.dynamic-text li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  /* border-left: 2px solid #f7db08; */
+  animation: slide 5s steps(20) infinite;
+}
