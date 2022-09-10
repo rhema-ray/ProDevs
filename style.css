@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@600;700&family=Ubuntu:wght@700&display=swap");
 
-:root {
-  --light-lime: #abd699;
-  --fresh-lemon: #ffe260;
-  --teal: hsl(167, 44%, 62%);
-  --mint: hsl(134, 24%, 82%);
-  --navy: hsl(245, 56%, 16%);
-  --white: hsl(0, 0%, 100%);
-  font-size: 62.5%;
-}
-
 /* RESETS */
 html {
   box-sizing: border-box;
@@ -27,13 +17,25 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --light-lime: #abd699;
+  --fresh-lemon: #ffe260;
+  --teal: hsl(167, 44%, 62%);
+  --mint: hsl(134, 24%, 82%);
+  --navy: hsl(245, 56%, 16%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
+  background-color: hsla(102, 43%, 72%, 1);
+
 }
 
 .noscroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -44,7 +46,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(black, transparent);
+  background-image: linear-gradient(#49673c, transparent);
 }
 
 .overlay {
@@ -54,7 +56,7 @@ body {
 nav {
   display: flex;
   position: relative;
-  background-color: var(--white);
+  background-color: hsla(102, 43%, 72%, 1);
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
@@ -62,7 +64,6 @@ nav {
 }
 
 nav ul {
-
   list-style: none;
   display: flex;
   justify-content: center;
@@ -83,31 +84,31 @@ nav ul li a {
 }
 
 li {
-    position: relative;
+  position: relative;
 }
 
 li::before {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: var(--navy);
-    border-radius: 8px 8px 0 0;
-    opacity: 0;
-    height: 3px;
-    left: 0;
-    right: 0;
-    bottom: -28px;
-    transition: opacity ease-in-out 300ms;
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--navy);
+  border-radius: 5px;
+  opacity: 0;
+  height: 3px;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  transition: opacity ease-in-out 300ms;
 }
 
 li:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 a:hover {
   color: #000;
-  background: #fff;
-  border-radius: .5rem;
+  /* background: #fff; */
+  border-radius: 0.5rem;
 }
 
 /* HAMBURGER MENU STYLING */
@@ -119,14 +120,14 @@ a:hover {
 .toggle span {
   display: block;
   width: 2.6rem;
-  height: .3rem;
+  height: 0.3rem;
   background-color: #1f1f1f;
   transition: all ease-in-out 200ms;
   transform-origin: 0.15rem 0.15rem;
 }
 
 .toggle span:not(:last-child) {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .open .toggle > span:first-child {
@@ -197,7 +198,7 @@ a:hover {
   background: white;
   padding: 2.6rem;
   margin-top: 2.4rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .menu a {
@@ -224,16 +225,115 @@ a:hover {
 }
 
 /* THE EQUILVALENT PADDING LEFT AND RIGHT OF THE NAV TO THE BODY */
-main {
-  padding: 0 2.5rem;
+/* main {
+  margin: 50px 100px 0;
+} */
+
+.hero-section {
+  background-color: #abd699;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 50px 100px 2.5rem;
+}
+
+.text {
+  text-align: left;
+  grid-row: 3/1;
+}
+
+.text > h1 {
+  line-height: 1.1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 5.6rem;
+  color: var(--white);
+}
+
+.text p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.image {
+  width: 100%;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+}
+
+.text button {
+  display: flex;
+  align-items: center;
+  background-color: hsla(102, 43%, 72%, 1);
+  color: var(--navy);
+  border: 1px solid #546464;
+  padding: 10px 15px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+ /* .text button:hover {
+  border: 1px solid white;
+}  */
+
+.svg {
+  background-image: url(Image/arrow-and-circle.svg);
+  background-size: cover;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.svg:hover {
+  background-image: url(Image/arrow.svg);
+}
+
+@media (min-width: 800px) {
+  .hide-from-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    margin: 50px 20px 0;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+
+ .text {
+    text-align: center;
+    grid-row: 3/4;
+  } 
+
+  .text button {
+    margin: 0 auto;
+  }
+
+ .text .hide-from-desktop {
+    font-size: 3.59rem;
+  }
+
+  .hide-from-mobile {
+    display: none;
+  }
 }
 
 
+/* ABOUT SECTION */
 
-
-/* ABOUT US SECTION */
-
-.about-container {
+.about-section {
+  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,7 +348,7 @@ main {
   justify-content: center;
   gap: 10px;
   padding-right: 45px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 50px;
 }
@@ -256,7 +356,7 @@ main {
 .wrapper .static-text {
   color: #000;
   font-size: 52px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .wrapper .dynamic-text {
@@ -268,9 +368,10 @@ main {
 }
 
 .dynamic-text li {
-  color: #75c9b7;
+  color: #abd699;
   list-style: none;
   font-size: 52px;
+  font-weight: 700;
   position: relative;
   top: 0;
   animation: slide 15s ease infinite;
