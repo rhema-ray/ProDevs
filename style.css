@@ -1,19 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@600;700&family=Ubuntu:wght@700&display=swap");
 
-/* RESETS */
-html {
-  box-sizing: border-box;
-}
+/* 
+thing rhema doesn't understand will have 🙋‍♂️ on it or the element
+selector
+*/
 
-*::before,
-::after,
+
+/* RESETS */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-
-a {
+  list-style: none;
   text-decoration: none;
 }
 
@@ -24,6 +22,7 @@ a {
   --mint: hsl(134, 24%, 82%);
   --navy: hsl(245, 56%, 16%);
   --white: hsl(0, 0%, 100%);
+  --black: #000;
   font-size: 62.5%;
 }
 
@@ -34,16 +33,17 @@ body {
 
 }
 
+/* 🙋‍♂️ What does this do?? */
 .noscroll {
   overflow: hidden;
 }
 
 /* HEADER */
-.overlay {
+.overlay {/*🙋‍♂️*/
   opacity: 0;
   position: fixed;
   top: 0;
-  right: 0;
+  right: 0; 
   bottom: 0;
   left: 0;
   background-image: linear-gradient(#49673c, transparent);
@@ -54,17 +54,17 @@ body {
 }
 
 nav {
+  /* position: relative; */
+  /* background-color: hsla(82, 43%, 72%, 1); */
+  /* align-items: center; */
+  /* padding: 2rem 15rem 2rem 4rem; */
   display: flex;
-  position: relative;
-  background-color: hsla(102, 43%, 72%, 1);
-  align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 2rem 15rem 2rem 4rem;
+  margin: 2em auto;
+  width: 94%;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
 }
@@ -85,24 +85,6 @@ nav ul li a {
 
 li {
   position: relative;
-}
-
-li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: var(--navy);
-  border-radius: 5px;
-  opacity: 0;
-  height: 3px;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  transition: opacity ease-in-out 300ms;
-}
-
-li:hover::before {
-  opacity: 1;
 }
 
 a:hover {
