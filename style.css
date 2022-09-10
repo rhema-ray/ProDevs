@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@600;700&family=Ubuntu:wght@700&display=swap");
 
-/* 
+/*
 thing rhema doesn't understand will have 🙋‍♂️ on it or the element
 selector
 */
@@ -224,11 +224,8 @@ a:hover {
   }
 }
 
-/* THE EQUILVALENT PADDING LEFT AND RIGHT OF THE NAV TO THE BODY */
-/* main {
-  margin: 50px 100px 0;
-} */
 
+/* HERO SECTION */
 .hero-section {
   background-color: #abd699;
   display: grid;
@@ -296,6 +293,7 @@ a:hover {
   background-image: url(Image/arrow.svg);
 }
 
+
 /* MEDIA QUERY FOR THE H1 */
 @media (min-width: 800px) {
   .hide-from-desktop {
@@ -346,7 +344,6 @@ a:hover {
 }
 
 
-
 /* ABOUT SECTION */
 
 .about-section {
@@ -366,8 +363,8 @@ a:hover {
   gap: 10px;
   padding-right: 45px;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 50px;
+  /* margin: 0 auto; */
+  /* margin-top: 50px; */
 }
 
 .wrapper .static-text {
