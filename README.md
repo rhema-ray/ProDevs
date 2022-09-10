@@ -7,4 +7,6 @@
  -  []()
 
 # Note
+
 For contributions, please go through the [Style guide](docs/style-guide.md) before you write a line of code.
+
