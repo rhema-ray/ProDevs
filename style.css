@@ -304,11 +304,12 @@ a:hover {
 
 /* MEDIA QUERY FOR THE HERO SECTION */
 @media (max-width: 800px) {
-  main {
-    margin: 50px 20px 0;
-  }
+  /* main {
+ 
+  } */
 
   .hero-section {
+    margin: 50px 20px 0;
     grid-template-columns: 1fr;
   }
 
@@ -328,6 +329,18 @@ a:hover {
   .hide-from-mobile {
     display: none;
   }
+}
+
+/* STACK SECTION */
+.stack {
+  background-color: var(--white);
+  padding-top: 10rem;
+  text-align: center;
+}
+
+.stack-icon {
+  display: flex;
+  gap: 150px;
 }
 
 
@@ -350,8 +363,8 @@ a:hover {
   gap: 10px;
   padding-right: 45px;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 50px;
+  /* margin: 0 auto; */
+  /* margin-top: 50px; */
 }
 
 .wrapper .static-text {
