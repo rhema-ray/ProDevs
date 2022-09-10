@@ -30,7 +30,8 @@ a {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  background-color: #abd699;
+  background-color: hsla(102, 43%, 72%, 1);
+
 }
 
 .noscroll {
@@ -224,14 +225,16 @@ a:hover {
 }
 
 /* THE EQUILVALENT PADDING LEFT AND RIGHT OF THE NAV TO THE BODY */
-main {
+/* main {
   margin: 50px 100px 0;
-}
+} */
 
 .hero-section {
+  background-color: #abd699;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  margin: 50px 100px 2.5rem;
 }
 
 .text {
@@ -250,7 +253,7 @@ main {
 .text p {
   font-size: 1.6rem;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .image {
@@ -276,14 +279,23 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.text button:hover {
+ /* .text button:hover {
   border: 1px solid white;
-}
+}  */
 
-.text img {
+.svg {
+  background-image: url(Image/arrow-and-circle.svg);
+  background-size: cover;
   margin-left: 10px;
   width: 30px;
+  height: 30px;
+  transition: all 0.3s ease-in-out;
 }
+
+.svg:hover {
+  background-image: url(Image/arrow.svg);
+}
+
 @media (min-width: 800px) {
   .hide-from-desktop {
     display: none;
@@ -315,4 +327,73 @@ main {
   .hide-from-mobile {
     display: none;
   }
+}
+
+
+/* ABOUT SECTION */
+
+.about-section {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100vw;
+  background-color: #fff;
+}
+
+.wrapper {
+  display: inline-flex;
+  padding: 1%;
+  justify-content: center;
+  gap: 10px;
+  padding-right: 45px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.wrapper .static-text {
+  color: #000;
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.wrapper .dynamic-text {
+  margin-left: 5px;
+  margin-top: 5px;
+  line-height: 52px;
+  height: 52px;
+  overflow: hidden;
+}
+
+.dynamic-text li {
+  color: #abd699;
+  list-style: none;
+  font-size: 52px;
+  font-weight: 700;
+  position: relative;
+  top: 0;
+  animation: slide 15s ease infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-text li span {
+  position: relative;
+}
+
+.dynamic-text li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  /* border-left: 2px solid #f7db08; */
+  animation: slide 5s steps(20) infinite;
 }
