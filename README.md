@@ -7,4 +7,4 @@
  -  []()
 
 # Note
-For contributions, please go through the [Style guide](docs/style-guide.md) before you write a line of code.
+Please read through the [Style guide](docs/style-guide.md) before writing a single line of code for this repository.
