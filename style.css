@@ -224,11 +224,8 @@ a:hover {
   }
 }
 
-/* THE EQUILVALENT PADDING LEFT AND RIGHT OF THE NAV TO THE BODY */
-/* main {
-  margin: 50px 100px 0;
-} */
 
+/* HERO SECTION */
 .hero-section {
   background-color: #abd699;
   display: grid;
@@ -296,12 +293,16 @@ a:hover {
   background-image: url(Image/arrow.svg);
 }
 
+
+/* MEDIA QUERY FOR THE H1 */
 @media (min-width: 800px) {
   .hide-from-desktop {
     display: none;
   }
 }
 
+
+/* MEDIA QUERY FOR THE HERO SECTION */
 @media (max-width: 800px) {
   main {
     margin: 50px 20px 0;
