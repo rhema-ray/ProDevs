@@ -63,6 +63,12 @@ nav {
   padding: 2rem 15rem 2rem 4rem;
 }
 
+.logo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+  color: var(--navy);
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -71,12 +77,6 @@ nav ul {
 
 nav li:not(:last-child) {
   margin-right: 4.8rem;
-}
-
-.logo {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 3rem;
-  color: var(--navy);
 }
 
 nav ul li a {
@@ -335,11 +335,19 @@ a:hover {
 .stack {
   background-color: var(--white);
   padding-top: 10rem;
+  width: 100%;
   text-align: center;
+}
+
+.stack > h2 {
+  margin-bottom: 2rem;
 }
 
 .stack-icon {
   display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
   gap: 150px;
 }
 
