@@ -6,19 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>">
     <title>ProDevs</title>
 </head>
 
 <body>
-
-    <!-- HEADER SECTION -->
+    
+    <!-- navbar mobile and desktop-->
     <header class="header">
         <div class="overlay has-fade"></div>
         <nav class="navbar">
-            <!-- NAVBAR -->
+
+            <!-- navbar logo -->
             <span class="logo">{ProDevs}</span> <!-- ANY BETTER SUGGESTION FOR THE LOGO -->
 
+            <!-- navbar links desktop -->
             <ul>
                 <li><a href="#">Home</a><hr></li>
                 <li><a href="#">About Us</a></li>
@@ -32,15 +35,9 @@
                 <span></span>
                 <span></span>
             </a>
-
-            <ul>
-                <!-- NAVBAR LIST  -->
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Crew</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
         </nav>
+
+        <!-- mobile view nav bar -->
         <div class="menu has-fade">
             <!-- TOOGLE MENU -->
             <a href="#">Home</a>
@@ -53,15 +50,17 @@
 
         <!-- HERO SECTION -->
         <section class="hero-section">
-            <div class="image">
-                <img src="Image/Wavy-Buddies-Address.svg" alt="">
-            </div>
+
             <div class="text">
                 <h1 class="hide-from-mobile">We're <br> Developers</h1>
                 <h1 class="hide-from-desktop">We're Developers</h1>
                 <p>We are a software development team dedicated to solving the world’s biggest problems one line of code
                     at a time.</p>
                 <button>Learn More <div class="svg"></div></button>
+            </div>
+
+            <div class="hero-image">
+                <img src="Image/Wavy-Buddies-Address.svg" alt="">
             </div>
         </section>
 
@@ -82,17 +81,17 @@
             </div>
         </section> -->
 
-                       <!-- STACK -->
-                       <section class="stack">
-                        <h2>Our Stack</h2>
-                        <div class="stack-icon">
-                            <img src="Image/git.svg" alt="git">
-                            <img src="Image/figma.svg" alt="figma">
-                            <img src="Image/html.svg" alt="html">
-                            <img src="Image/css.svg" alt="css">
-                            <img src="Image/javascript.svg" alt="javascript">
-                        </div>
-                    </section>
+        <!-- STACK -->
+        <section class="stack">
+            <h2>Our Stack</h2>
+            <div class="stack-icon">
+                <img src="Image/git.svg" alt="git">
+                <img src="Image/figma.svg" alt="figma">
+                <img src="Image/html.svg" alt="html">
+                <img src="Image/css.svg" alt="css">
+                <img src="Image/javascript.svg" alt="javascript">
+            </div>
+        </section>
     </main>
 </body>
 <script src="app/script.js"></script>
