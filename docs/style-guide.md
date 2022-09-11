@@ -29,15 +29,19 @@ This is a (flexible) set of coding rules that will guide us through this project
 <br/>
 
 ## Writing comments
-write discriptinv coment. The comment should tell us what the code is doing not how its doing it. if you need idea for what proper comments look like:
-
+Write descriptive and intuitive comments. The comment should tell us what the code is doing, not how it's doing it. If you need an idea of what proper comments look like, t
 **HTML**
 ```html
     <!-- navbar for mobile and desktop-->
   <header class="">
   </header>
 ```
-
+if it's css:
+```css
+/* mobile nav[open] overlay*/
+main .overlay {
+}
+```
 <br/>
 <br/>
 
@@ -51,25 +55,26 @@ Read this article for [how to write a proper commit message](https://cbea.ms/git
 
 
 ### Naming classes and IDs
-I am not a master at nameing thing but i one thing that has been a pain in my ass is reading the name some of you give thing when you style elements in css. Terible name can and will slow you down. 
+I am not a master at naming things, but one thing that has been a pain in my ass is reading the names some people give things when they style elements in CSS. Terrible names can and will slow you down.
 
-here are some rules i like to follow when i name things in html
+Here are some rules I like to follow when I name things in html:
 
-1. if the element is a child i suggest adding a refernce to the parent name
-example:
+1. If the element is a child, I suggest adding a reference to the parent's name.
+
+**Example:**
 ```html
 <div class="hero-img">
   <!-- or -->
 <div class="hero-image">
 ```
 
-2. don't name thing unnecerily expecially when a comment could have been sufficent.
+2. Don't name things that don't need to be named, especially when a comment would suffice.
 
-examle:
+**An example of don'ts:**
 ```html
 <nav class="navbar">
 ```
-this is an example of a class that doesn't need to exist. If youre going to name a tag that has its use case litterly as it's name let it be in edge cases
+This is an example of a class that doesn't need to exist. If you're going to name a tag that has its use case literally as its name, let it be in edge cases.
 
 **Example:**
 
@@ -79,12 +84,12 @@ this is an example of a class that doesn't need to exist. If youre going to name
 
 <nav class="mobile">
 </nav>
-<!-- the name suggest that the various menu item are for different views -->
+<!-- As you can see, their name suggests that the various menu items are for different views. -->
 ```
 
-don't use obscure names. Use names that are discriptive or easy too understand
+3. Don't use obscure names. Use names that are descriptive or easy to understand.
 
-Dont:
+**Don't:**
 ```html
 <div class="overlay has-fade"></div>
 ```
@@ -93,7 +98,22 @@ you can use:
 ```html
 <div class="mobile-nav-overlay"></div>
 ```
-It's better to have a long name everyone can easily understand than something short no one can figure out.
+Don't use obscure names. Use names that are descriptive or easy to understand. If you're going to use short forms, use things everyone will understand or add a comment at the beginning of the document explaining what the short form means.
+
+4. Naming sections: For simplicity, I suggest we name sections like this:
+```html
+<section class="section-1" id="hero">
+<!-- or -->
+<section class="section-1 hero">
+```
+This, in my opinion, is a far simpler and easier-to-understand naming scheme😃. Plus, it follows a congruent naming scheme, so targeting the next section is much easier.
+
+```html
+<section class="section-1" id="hero">
+
+<section class="section-2" id="about">
+```
+Because they follow the same pattern.
 
 <br/>
 <br/>
