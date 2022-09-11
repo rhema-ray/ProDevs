@@ -335,10 +335,13 @@ a:hover {
 .stack {
   background-color: var(--white);
   padding-top: 10rem;
+  width: 100%;
   text-align: center;
 }
 
-.stack > 
+.stack > h2 {
+  margin-bottom: 2rem;
+}
 
 .stack-icon {
   display: flex;
