@@ -69,21 +69,20 @@ nav {
   color: var(--navy);
 }
 
-nav ul {
-  list-style: none;
+header nav ul {
   display: flex;
   justify-content: center;
 }
 
-nav li:not(:last-child) {
+header nav li:not(:last-child) {
   margin-right: 4.8rem;
 }
 
-nav ul li a {
+header nav ul li a {
   color: var(--navy);
 }
 
-li {
+header nav ul li {
   position: relative;
 }
 
