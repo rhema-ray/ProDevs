@@ -8,4 +8,4 @@
 
 # Note
 
-Please read through the [Style guide](docs/style-guide.md) before writing a single line of code for this repository.
+Please read through the [style guide](docs/style-guide.md) before contributing a line of code to this repository.
