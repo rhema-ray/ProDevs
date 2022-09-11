@@ -39,7 +39,7 @@ body {
 }
 
 /* HEADER */
-.overlay {/*🙋‍♂️*/
+.overlay {/*🙋‍♂️ */
   opacity: 0;
   position: fixed;
   top: 0;
@@ -54,17 +54,17 @@ body {
 }
 
 nav {
-  /* position: relative; */
-  /* background-color: hsla(82, 43%, 72%, 1); */
-  /* align-items: center; */
-  /* padding: 2rem 15rem 2rem 4rem; */
   display: flex;
+  position: relative;
+  background-color: hsla(102, 43%, 72%, 1);
+  align-items: center;
   justify-content: space-between;
-  margin: 2em auto;
-  width: 94%;
+  margin: 0 auto;
+  padding: 2rem 15rem 2rem 4rem;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
 }
@@ -85,6 +85,24 @@ nav ul li a {
 
 li {
   position: relative;
+}
+
+li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--navy);
+  border-radius: 5px;
+  opacity: 0;
+  height: 3px;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  transition: opacity ease-in-out 300ms;
+}
+
+li:hover::before {
+  opacity: 1;
 }
 
 a:hover {
@@ -278,18 +296,22 @@ a:hover {
   background-image: url(Image/arrow.svg);
 }
 
+/* MEDIA QUERY FOR THE H1 */
 @media (min-width: 800px) {
   .hide-from-desktop {
     display: none;
   }
 }
 
+
+/* MEDIA QUERY FOR THE HERO SECTION */
 @media (max-width: 800px) {
-  main {
-    margin: 50px 20px 0;
-  }
+  /* main {
+ 
+  } */
 
   .hero-section {
+    margin: 50px 20px 0;
     grid-template-columns: 1fr;
   }
 
