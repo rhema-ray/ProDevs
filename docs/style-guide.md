@@ -11,7 +11,7 @@ This is a (flexible) set of coding rules that will guide us through this project
 
 1. **Importants rules**
 - [writing commit messages](#writing-commit-messages)
-
+- [Writing comments]
 2. **Coding rules**
 - [html](#html)
     - [Naming classes and IDs](#naming-classes-and-ids)
@@ -28,6 +28,19 @@ This is a (flexible) set of coding rules that will guide us through this project
 <br/>
 <br/>
 
+## Writing comments
+write discriptinv coment. The comment should tell us what the code is doing not how its doing it. if you need idea for what proper comments look like:
+
+**HTML**
+```html
+    <!-- navbar for mobile and desktop-->
+  <header class="">
+  </header>
+```
+
+<br/>
+<br/>
+
 ## Writing commit messages
 Writing good commit names is essential because it aids in future debugging, especially when trying to figure out what introduced a bug. `God abeg` is an example of a commit message that won't help you find the source of your problems.
 
@@ -38,12 +51,50 @@ Read this article for [how to write a proper commit message](https://cbea.ms/git
 
 
 ### Naming classes and IDs
+I am not a master at nameing thing but i one thing that has been a pain in my ass is reading the name some of you give thing when you style elements in css. Terible name can and will slow you down. 
 
-if the element is a child i suggest adding a refernce to the parent name
-example
+here are some rules i like to follow when i name things in html
+
+1. if the element is a child i suggest adding a refernce to the parent name
+example:
 ```html
+<div class="hero-img">
+  <!-- or -->
 <div class="hero-image">
 ```
+
+2. don't name thing unnecerily expecially when a comment could have been sufficent.
+
+examle:
+```html
+<nav class="navbar">
+```
+this is an example of a class that doesn't need to exist. If youre going to name a tag that has its use case litterly as it's name let it be in edge cases
+
+**Example:**
+
+```html
+<nav class="desktop">
+</nav>
+
+<nav class="mobile">
+</nav>
+<!-- the name suggest that the various menu item are for different views -->
+```
+
+don't use obscure names. Use names that are discriptive or easy too understand
+
+Dont:
+```html
+<div class="overlay has-fade"></div>
+```
+you can use:
+
+```html
+<div class="mobile-nav-overlay"></div>
+```
+It's better to have a long name everyone can easily understand than something short no one can figure out.
+
 <br/>
 <br/>
 
@@ -64,11 +115,11 @@ Please write your style in a tree format, starting from the grandparent to the c
 **Example:**
 
 ```css
-.section-b .gallery-story .header h1{
+section.section-b .gallery-story .header h1{
 
-  }
+}
 ```
-
+that way it will be to understand what your styling does, and you wowuldn't have to give comments about it.
 <br/>
 <br/>
 
