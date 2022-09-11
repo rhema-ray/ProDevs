@@ -209,6 +209,8 @@ a:hover {
 }
 
 
+
+
 /* HERO SECTION */
 .hero-section {
   background-color: #abd699;
@@ -276,6 +278,8 @@ a:hover {
 .svg:hover {
   background-image: url(Image/arrow.svg);
 }
+
+
 
 
 /* STACK SECTION */
@@ -367,8 +371,6 @@ a:hover {
   animation: slide 5s steps(20) infinite;
 }
 
-/* MEDIA QUERY */
-
 /* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
 
 @media (max-width: 800px) {
@@ -383,11 +385,41 @@ a:hover {
   .toggle {
     display: block;
   }
+}
 
-  /* MEDIA QUERY FOR THE H1 */
+/* MEDIA QUERY FOR THE H1 */
 @media (min-width: 800px) {
   .hide-from-desktop {
     display: none;
   }
 }
+
+
+/* MEDIA QUERY FOR THE HERO SECTION */
+@media (max-width: 800px) {
+  /* main {
+ 
+  } */
+
+  .hero-section {
+    margin: 50px 20px 0;
+    grid-template-columns: 1fr;
+  }
+
+ .text {
+    text-align: center;
+    grid-row: 3/4;
+  } 
+
+  .text button {
+    margin: 0 auto;
+  }
+
+ .text .hide-from-desktop {
+    font-size: 3.59rem;
+  }
+
+  .hide-from-mobile {
+    display: none;
+  }
 }
