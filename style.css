@@ -333,6 +333,19 @@ a:hover {
   }
 }
 
+/* STACK SECTION */
+.stack {
+  background-color: var(--white);
+  padding-top: 10rem;
+  text-align: center;
+}
+
+.stack-icon {
+  display: flex;
+  gap: 150px;
+}
+
+
 
 /* ABOUT SECTION */
 
