@@ -29,7 +29,7 @@ selector
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  background-color: hsla(102, 43%, 72%, 1);
+  /* background-color: hsla(102, 43%, 72%, 1); */
 
 }
 
@@ -216,12 +216,14 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  margin: 50px 100px 2.5rem;
+  height: 100vh;
+  padding: 50px 100px 5rem;
 }
 
 .text {
   text-align: left;
   grid-row: 3/1;
+  margin-bottom: 2rem;
 }
 
 .text > h1 {
@@ -284,7 +286,7 @@ a:hover {
 /* STACK SECTION */
 .stack {
   background-color: var(--white);
-  padding-top: 10rem;
+  padding:  15rem 10rem 15rem;
   width: 100%;
   text-align: center;
 }
@@ -298,31 +300,40 @@ a:hover {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  gap: 150px;
+  gap: 120px;
 }
-
 
 /* ABOUT SECTION */
-
 .about-section {
-  background-color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
   background-color: #fff;
+    padding: 50px 100px 5rem;
 }
 
-.wrapper {
+.left > p {
+  color: hsla(134, 13%, 67%, 1);
+  margin-bottom: 0.5rem;
+  font-size: 2.1rem;
+}
+
+.left  h2 {
+  font-size: 3.4rem;
+}
+
+.right p {
+  margin-top: 7rem;
+}
+
+/* .wrapper {
   display: inline-flex;
   padding: 1%;
   justify-content: center;
   gap: 10px;
   padding-right: 45px;
   width: 100%;
-  /* margin: 0 auto; */
-  /* margin-top: 50px; */
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .wrapper .static-text {
@@ -366,33 +377,9 @@ a:hover {
   height: 100%;
   width: 100%;
   background: transparent;
-  /* border-left: 2px solid #f7db08; */
+  border-left: 2px solid #f7db08;
   animation: slide 5s steps(20) infinite;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} */
 
 
 
@@ -427,7 +414,7 @@ a:hover {
   } */
 
   .hero-section {
-    margin: 50px 20px 0;
+    padding: 50px 20px 0;
     grid-template-columns: 1fr;
   }
 
