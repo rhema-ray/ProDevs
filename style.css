@@ -208,22 +208,6 @@ a:hover {
   text-align: center;
 }
 
-/* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
-
-@media (max-width: 800px) {
-  nav {
-    padding: 2rem 2.5rem;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  .toggle {
-    display: block;
-  }
-}
-
 
 /* HERO SECTION */
 .hero-section {
@@ -293,43 +277,6 @@ a:hover {
   background-image: url(Image/arrow.svg);
 }
 
-
-/* MEDIA QUERY FOR THE H1 */
-@media (min-width: 800px) {
-  .hide-from-desktop {
-    display: none;
-  }
-}
-
-
-/* MEDIA QUERY FOR THE HERO SECTION */
-@media (max-width: 800px) {
-  /* main {
- 
-  } */
-
-  .hero-section {
-    margin: 50px 20px 0;
-    grid-template-columns: 1fr;
-  }
-
- .text {
-    text-align: center;
-    grid-row: 3/4;
-  } 
-
-  .text button {
-    margin: 0 auto;
-  }
-
- .text .hide-from-desktop {
-    font-size: 3.59rem;
-  }
-
-  .hide-from-mobile {
-    display: none;
-  }
-}
 
 /* STACK SECTION */
 .stack {
@@ -418,4 +365,29 @@ a:hover {
   background: transparent;
   /* border-left: 2px solid #f7db08; */
   animation: slide 5s steps(20) infinite;
+}
+
+/* MEDIA QUERY */
+
+/* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
+
+@media (max-width: 800px) {
+  nav {
+    padding: 2rem 2.5rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  /* MEDIA QUERY FOR THE H1 */
+@media (min-width: 800px) {
+  .hide-from-desktop {
+    display: none;
+  }
+}
 }
