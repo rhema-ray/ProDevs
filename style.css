@@ -223,19 +223,53 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-.text > h1 {
+.static-text {
   line-height: 1.1;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 5.6rem;
-  color: var(--white);
+  color: #fff;
 }
 
-.text p {
-  font-size: 1.6rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+.dynamic-text {
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  line-height: 60px;
+  height: 62px;
+  overflow: hidden;
 }
+
+.dynamic-text li {
+  color: #fff;
+  list-style: none;
+  font-size: 5.6rem;
+  position: relative;
+  top: 0;
+  animation: slide 15s ease infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-text li span {
+  position: relative;
+}
+
+.dynamic-text li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  /* border-left: 2px solid #f7db08; */
+  animation: slide 5s steps(20) infinite;
+}
+
 
 .image {
   width: 100%;
@@ -422,6 +456,7 @@ a:hover {
   transform: rotate(-15deg);
 }
 
+
 /* CONTACT US  */
 .contact {
   display: grid;
@@ -515,13 +550,76 @@ a:hover {
 
   /* MEDIA QUERY FOR THE STACK SECTION  */
 }
-
   /* MEDIA QUERY FOR THE H1 */
   @media (min-width: 801px) {
     .hide-from-desktop {
       display: none;
     }
   }
+  
+  
+}
+
+
+
+
+/* IN AND OUT TEXT */
+
+.text-center-two {
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: var(--black);
+  text-transform: uppercase;
+  height: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 30px;
+}
+
+.tech-container {
+  height: 200px;
+  width: 100vw;
+  background-color: var(--white);
+  padding: 20px;
+}
+
+.technology {
+  position: relative;
+  height: 200px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.technology h2 {
+  position: absolute;
+  width: 100vw;
+  height: 90%;
+  margin: 0;
+  padding: 0;
+  font-size: 4em;
+  color: var(--black);
+  font-family: 'Montserrat';
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100px;
+  transform: translateX(100%);
+  animation: scrolling 15s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
 
 
 
