@@ -5,7 +5,6 @@ thing rhema doesn't understand will have 🙋‍♂️ on it or the element
 selector
 */
 
-
 /* RESETS */
 * {
   box-sizing: border-box;
@@ -29,8 +28,7 @@ selector
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  background-color: hsla(102, 43%, 72%, 1);
-
+  /* background-color: hsla(102, 43%, 72%, 1); */
 }
 
 /* 🙋‍♂️ What does this do?? */
@@ -39,11 +37,12 @@ body {
 }
 
 /* HEADER */
-.overlay {/*🙋‍♂️ */
+.overlay {
+  /*🙋‍♂️ */
   opacity: 0;
   position: fixed;
   top: 0;
-  right: 0; 
+  right: 0;
   bottom: 0;
   left: 0;
   background-image: linear-gradient(#49673c, transparent);
@@ -208,19 +207,20 @@ a:hover {
   text-align: center;
 }
 
-
 /* HERO SECTION */
 .hero-section {
   background-color: #abd699;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  margin: 50px 100px 2.5rem;
+  /* height: 100vh; */
+  padding: 5rem 10rem 5rem;
 }
 
 .text {
   text-align: left;
   grid-row: 3/1;
+  margin-bottom: 2rem;
 }
 
 .static-text {
@@ -290,20 +290,17 @@ a:hover {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
-  border-radius: 30px;
+  border-radius: 3rem;
   transition: all 0.3s ease-in-out;
 }
 
- /* .text button:hover {
-  border: 1px solid white;
-}  */
 
 .svg {
   background-image: url(Image/arrow-and-circle.svg);
   background-size: cover;
-  margin-left: 10px;
-  width: 30px;
-  height: 30px;
+  margin-left: 1rem;
+  width: 3rem;
+  height: 3rem;
   transition: all 0.3s ease-in-out;
 }
 
@@ -311,17 +308,17 @@ a:hover {
   background-image: url(Image/arrow.svg);
 }
 
-
 /* STACK SECTION */
 .stack {
   background-color: var(--white);
-  padding-top: 10rem;
+  padding: 10rem 10rem 10rem;
   width: 100%;
   text-align: center;
 }
 
 .stack > h2 {
   margin-bottom: 2rem;
+  font-size: 3rem;
 }
 
 .stack-icon {
@@ -329,66 +326,192 @@ a:hover {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  gap: 150px;
+  gap: 12rem;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  background-color: #fff;
+  padding: 5rem 10rem 12rem;
+}
+
+.left > p {
+  color: hsla(134, 13%, 67%, 1);
+  margin-bottom: 0.5rem;
+  font-size: 2.1rem;
+}
+
+.left h2 {
+  font-size: 3.4rem;
+}
+
+.right p {
+  margin-top: 7rem;
 }
 
 
-/* ABOUT SECTION */
+/* TEAM SECTION */
+.team {
+  padding: 10rem;
+  background-color: hsla(102, 43%, 72%, 1);
+  text-align: center;
+}
 
-/* .about-section {
-  background-color: var(--white);
+.team > h2 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.team .top {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px;
-  width: 100vw;
-  background-color: #fff;
-} */
-
-/* .dynamic-text {
-  margin-left: 5px;
-  margin-top: 5px;
-  line-height: 52px;
-  height: 52px;
-  overflow: hidden;
-} */
-
-/* .dynamic-text li {
-  color: #abd699;
-  list-style: none;
-  font-size: 52px;
-  font-weight: 700;
-  position: relative;
-  top: 0;
-  animation: slide 15s ease infinite;
-} */
-/* 
-@keyframes slide {
-  100% {
-    top: -360px;
-  }
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  gap: 2rem;
 }
 
-.dynamic-text li span {
-  position: relative;
-} */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  max-width: 33rem;
+  border-radius: .8rem;
+  padding: 2rem;
+}
 
-/* .dynamic-text li span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: transparent;
-  /* border-left: 2px solid #f7db08; */
-  animation: slide 5s steps(20) infinite;
-} */
 
-/* MEDIA QUERY */
+.card > img {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
 
-/* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
+.card h3 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+.card p {
+  margin-bottom: 1.8rem;
+  font-size: 1.6rem;
+}
+
+.details {
+  text-align: center;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.connect a:hover {
+  text-decoration: underline;
+}
+
+.connect > .contacts:not(:last-child) {
+  margin-bottom: .8rem;
+}
+
+.contacts {
+  display: flex;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.contacts > .el {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.el:hover {
+  text-decoration: none;
+}
+
+.team .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.keek {
+  transform: rotate(-45deg);
+}
+
+.sturner {
+  transform: rotate(-15deg);
+}
+
+
+/* CONTACT US  */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 10rem 10rem 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact h3 {
+  font-size: 3rem;
+  place-self: flex-end;
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  background: hsla(238, 22%, 31%, 1);
+  padding: 1.2rem;
+  text-align: center;
+  color: white;
+  width: 22rem;
+  grid-row: 3/2;
+  grid-column: 3/2;
+}
+
+.contact img {
+  margin-left: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 800px) {
+  /* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
   nav {
     padding: 2rem 2.5rem;
   }
@@ -401,12 +524,40 @@ a:hover {
     display: block;
   }
 
-  /* MEDIA QUERY FOR THE H1 */
-@media (min-width: 800px) {
-  .hide-from-desktop {
+  /* MEDIA QUERY FOR THE HERO SECTION */
+  .hero-section {
+    padding: 50px 20px 0;
+    grid-template-columns: 1fr; 
+
+  }
+
+  .text {
+    text-align: center;
+    grid-row: 3/4;
+  }
+
+  .text button {
+    margin: 0 auto;
+  }
+
+  .text .hide-from-desktop {
+    font-size: 3.59rem;
+  }
+
+  .hide-from-mobile {
     display: none;
   }
+
+  /* MEDIA QUERY FOR THE STACK SECTION  */
 }
+  /* MEDIA QUERY FOR THE H1 */
+  @media (min-width: 801px) {
+    .hide-from-desktop {
+      display: none;
+    }
+  }
+  
+  
 }
 
 
@@ -466,3 +617,78 @@ a:hover {
     transform: translateX(-100%);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
