@@ -280,13 +280,14 @@ a:hover {
 /* STACK SECTION */
 .stack {
   background-color: var(--white);
-  padding: 15rem 10rem 15rem;
+  padding: 12rem 10rem 12rem;
   width: 100%;
   text-align: center;
 }
 
 .stack > h2 {
   margin-bottom: 2rem;
+  font-size: 3rem;
 }
 
 .stack-icon {
@@ -302,7 +303,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1.7fr;
   background-color: #fff;
-  padding: 50px 100px 5rem;
+  padding: 50px 100px 12rem;
 }
 
 .left > p {
@@ -318,6 +319,101 @@ a:hover {
 .right p {
   margin-top: 7rem;
 }
+
+
+/* TEAM SECTION */
+.team {
+  padding: 50px 100px 5rem;
+  background-color: hsla(102, 43%, 72%, 1);
+  text-align: center;
+}
+
+.team > h2 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.team .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  max-width: 330px;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+
+.card > img {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.card h3 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+.card p {
+  margin-bottom: 1.8rem;
+  font-size: 1.6rem;
+}
+
+.details {
+  text-align: center;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.connect a:hover {
+  text-decoration: underline;
+}
+
+.connect > a:not(:last-child) {
+  margin-bottom: .8rem;
+}
+
+.contacts {
+  display: flex;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.contacts > .el {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.team .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+
 
 /* .wrapper {
   display: inline-flex;
