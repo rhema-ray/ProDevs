@@ -13,6 +13,7 @@ selector
   padding: 0;
   list-style: none;
   text-decoration: none;
+  /* outline: 1px dashed rgba(128, 0, 128, 0.603); */
 }
 
 :root {
@@ -38,7 +39,7 @@ body {
   overflow: hidden;
 }
 
-/* HEADER */
+/* mobile nav open overlay  should be in the mobile styling*/
 .overlay {/*🙋‍♂️ */
   opacity: 0;
   position: fixed;
@@ -53,63 +54,101 @@ body {
   display: block;
 }
 
-nav {
+
+
+/*HEADER*/
+/*  desktop nav styling */
+header{
+  position: absolute;
+  width: 100%;
+}
+
+
+header nav {
   display: flex;
-  position: relative;
-  background-color: hsla(102, 43%, 72%, 1);
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 2rem 15rem 2rem 4rem;
+  margin: 2em auto;
+  width: 87%;
+  position: relative;
+  /* background-color: hsla(102, 43%, 72%, 1); */
+  /* padding: 2rem 15rem 2rem 4rem; */
 }
 
-.logo {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 3rem;
+/* nav bar logo */
+header nav .logo {
+  font-family: "airbnb", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
   color: var(--navy);
 }
-
-nav ul {
-  list-style: none;
+/* nav bar links */
+header ul {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 nav li:not(:last-child) {
   margin-right: 4.8rem;
 }
 
+/*  nav link styling and animations*/
+
 nav ul li a {
-  color: var(--navy);
+  color: #546464;
+  font-family: inter;
+  transition: .2s ease-in-out font-weight, .7s ease-in-out color;
+}
+
+header nav ul li:first-child a{
+  font-weight: 600;
+  color: #000;
+}
+
+header nav ul li hr{
+  background-color: #000;
+  height: 1.5px;
+  margin-top: 3px;
+  width: 0;
+  visibility: hidden;
+  border-radius: 3px;
+  transition: .5s ease-in-out width,.5s;
+  outline: none;
+  border: none;
+}
+
+/* i don't know how it works, don't ask */
+header nav ul li:first-child hr {
+  width: 70%;
+  visibility: visible;
+}
+
+header nav ul li:first-child hr {
+  visibility: visible;
+}
+header nav ul:hover li:first-child:not(:hover) hr  {
+  width: 0%;
+  visibility: hidden;
+  transition:  .1s .5s visibility;
+
+}
+header nav ul:hover li:first-child:not(:hover) a {
+color: #546464;
+}
+
+header nav ul li:hover:not(:first-child) hr  {
+  width: 70%;
+  visibility: visible;
+}
+header nav ul li:hover:not(:first-child) a {
+  /* font-weight: 600; *//* commented it out because it does a weird snapping effect */
+  color: #000;
 }
 
 li {
   position: relative;
 }
 
-li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: var(--navy);
-  border-radius: 5px;
-  opacity: 0;
-  height: 3px;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  transition: opacity ease-in-out 300ms;
-}
-
-li:hover::before {
-  opacity: 1;
-}
-
-a:hover {
-  color: #000;
-  /* background: #fff; */
-  border-radius: 0.5rem;
-}
 
 /* HAMBURGER MENU STYLING */
 .toggle {
@@ -121,6 +160,7 @@ a:hover {
   display: block;
   width: 2.6rem;
   height: 0.3rem;
+  border-radius: 10px;
   background-color: #1f1f1f;
   transition: all ease-in-out 200ms;
   transform-origin: 0.15rem 0.15rem;
@@ -142,7 +182,7 @@ a:hover {
   transform: rotate(-45deg);
 }
 
-/* ANIMATIONS */
+/* hamburger menu open animations */
 .has-fade {
   visibility: hidden;
 }
@@ -211,20 +251,21 @@ a:hover {
 
 
 
-/* HERO SECTION */
-.hero-section {
+/*********
+* Section 1: hero section 
+*/
+
+section.section-1{
   background-color: #abd699;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  /* align-items: center; */
   height: 100vh;
-  padding: 50px 100px 5rem;
+  padding: 150px 100px 0;
 }
 
 .text {
   text-align: left;
-  grid-row: 3/1;
-  margin-bottom: 2rem;
 }
 
 .text > h1 {
@@ -388,8 +429,9 @@ a:hover {
 
 @media (max-width: 800px) {
   nav {
-    padding: 2rem 2.5rem;
-  }
+    margin: 3em auto !important;
+    width: 89% !important;
+    }
 
   nav ul {
     display: none;
@@ -414,7 +456,7 @@ a:hover {
  
   } */
 
-  .hero-section {
+  section.section-1 {
     padding: 50px 20px 0;
     grid-template-columns: 1fr;
   }
