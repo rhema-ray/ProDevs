@@ -5,7 +5,6 @@ thing rhema doesn't understand will have 🙋‍♂️ on it or the element
 selector
 */
 
-
 /* RESETS */
 * {
   box-sizing: border-box;
@@ -30,7 +29,6 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   /* background-color: hsla(102, 43%, 72%, 1); */
-
 }
 
 /* 🙋‍♂️ What does this do?? */
@@ -39,11 +37,12 @@ body {
 }
 
 /* HEADER */
-.overlay {/*🙋‍♂️ */
+.overlay {
+  /*🙋‍♂️ */
   opacity: 0;
   position: fixed;
   top: 0;
-  right: 0; 
+  right: 0;
   bottom: 0;
   left: 0;
   background-image: linear-gradient(#49673c, transparent);
@@ -208,9 +207,6 @@ a:hover {
   text-align: center;
 }
 
-
-
-
 /* HERO SECTION */
 .hero-section {
   background-color: #abd699;
@@ -264,7 +260,7 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
- /* .text button:hover {
+/* .text button:hover {
   border: 1px solid white;
 }  */
 
@@ -281,13 +277,10 @@ a:hover {
   background-image: url(Image/arrow.svg);
 }
 
-
-
-
 /* STACK SECTION */
 .stack {
   background-color: var(--white);
-  padding:  15rem 10rem 15rem;
+  padding: 15rem 10rem 15rem;
   width: 100%;
   text-align: center;
 }
@@ -309,7 +302,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1.7fr;
   background-color: #fff;
-    padding: 50px 100px 5rem;
+  padding: 50px 100px 5rem;
 }
 
 .left > p {
@@ -318,7 +311,7 @@ a:hover {
   font-size: 2.1rem;
 }
 
-.left  h2 {
+.left h2 {
   font-size: 3.4rem;
 }
 
@@ -382,10 +375,6 @@ a:hover {
   animation: slide 5s steps(20) infinite;
 } */
 
-
-
-
-
 @media (max-width: 800px) {
   /* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
   nav {
@@ -409,30 +398,27 @@ a:hover {
   .text {
     text-align: center;
     grid-row: 3/4;
-  } 
+  }
 
   .text button {
     margin: 0 auto;
   }
 
-
   .text .hide-from-desktop {
     font-size: 3.59rem;
   }
 
-  
   .hide-from-mobile {
     display: none;
   }
 
-  /* MEDIA QUERY FOR THE H1 */
-  .hide-from-desktop {
-    display: none;
-  }
-
   /* MEDIA QUERY FOR THE STACK SECTION  */
-
-
 }
 
+  /* MEDIA QUERY FOR THE H1 */
+  @media (min-width: 801px) {
+    .hide-from-desktop {
+      display: none;
+    }
+  }
 
