@@ -417,6 +417,13 @@ a:hover {
   gap: 2rem;
 }
 
+.keek {
+  transform: rotate(-45deg);
+}
+
+.sturner {
+  transform: rotate(-15deg);
+}
 
 /* CONTACT US  */
 .contact {
