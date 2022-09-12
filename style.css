@@ -384,9 +384,10 @@ a:hover {
 
 
 
-/* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
+
 
 @media (max-width: 800px) {
+  /* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
   nav {
     padding: 2rem 2.5rem;
   }
@@ -398,28 +399,14 @@ a:hover {
   .toggle {
     display: block;
   }
-}
 
-/* MEDIA QUERY FOR THE H1 */
-@media (min-width: 800px) {
-  .hide-from-desktop {
-    display: none;
-  }
-}
-
-
-/* MEDIA QUERY FOR THE HERO SECTION */
-@media (max-width: 800px) {
-  /* main {
- 
-  } */
-
+  /* MEDIA QUERY FOR THE HERO SECTION */
   .hero-section {
     padding: 50px 20px 0;
     grid-template-columns: 1fr;
   }
 
- .text {
+  .text {
     text-align: center;
     grid-row: 3/4;
   } 
@@ -428,12 +415,24 @@ a:hover {
     margin: 0 auto;
   }
 
- .text .hide-from-desktop {
+
+  .text .hide-from-desktop {
     font-size: 3.59rem;
   }
 
+  
   .hide-from-mobile {
     display: none;
   }
+
+  /* MEDIA QUERY FOR THE H1 */
+  .hide-from-desktop {
+    display: none;
+  }
+
+  /* MEDIA QUERY FOR THE STACK SECTION  */
+
+
 }
+
 
