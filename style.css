@@ -256,6 +256,7 @@ a:hover {
 
 .dynamic-text li {
   color: #fff;
+  line-height: 1.1;
   font-weight: bold;
   list-style: none;
   font-size: 5.6rem;
@@ -393,7 +394,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   border: 1px solid white;
-  max-width: 33rem;
+  width: 33rem;
   border-radius: .8rem;
   padding: 2rem;
 }
@@ -421,6 +422,7 @@ a:hover {
 
 .details {
   text-align: center;
+  width: 28.5rem;
   border: 1px solid white;
   padding: 20px;
   border-radius: 8px;
@@ -503,6 +505,7 @@ a:hover {
   margin-left: 2rem;
 }
 
+/* MEDIA QUERIES */
 
 @media (max-width: 800px) {
   /* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
@@ -510,19 +513,18 @@ a:hover {
     padding: 2rem 2.5rem;
   }
 
-  nav ul {
+  header nav ul {
     display: none;
   }
 
   .toggle {
     display: block;
   }
-}
 
 
   /* MEDIA QUERY FOR THE HERO SECTION */
   .hero-section {
-    padding: 50px 20px 0;
+    padding: 5rem 2rem 5rem;
     grid-template-columns: 1fr; 
 
   }
@@ -536,20 +538,80 @@ a:hover {
     margin: 0 auto;
   }
 
-  .text .hide-from-desktop {
+ .dynamic-text h1 {
     font-size: 3.59rem;
   }
 
-  .hide-from-mobile {
+  .hide-for-mobile {
     display: none;
   }
 
-  /* MEDIA QUERY FOR THE STACK SECTION  */
+  /* MEDIA QUERY FOR THE ABOUT SECTION */
+  .about-section {
+    padding: 5rem 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-section h2 {
+    font-size: 2.8rem;
+  }  
+
+  .about-section .right p {
+    margin-top: 2.5rem;
+    text-align: left;
+  }
+
+    /* mobile STACK SECTION */
+    .mobile {
+      padding: 0rem 2rem 5rem;
+    }
+  
+    .mobile h2 {
+      font-size: 2rem;
+    }
+  
+    .stack-icon {
+      gap: 4rem;
+    }
+  
+    .stack-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+  /* TEAM SECTION */
+   .team {
+    padding: 5rem 2rem 5rem;
+   }
+
+  .team .top,
+  .bottom {
+    flex-direction: column;
+  }
+
+/* CONTACT US SECTION */
+  .contact {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem 5rem;
+  }
+  .contact h3 {
+    font-size: 3rem;
+    place-self: flex-start;
+    margin-bottom: 3rem;
+  }
+   
+  .contact a {
+    place-self: flex-end;
+  }
 }
+
 
   /* MEDIA QUERY FOR THE H1 */
   @media (min-width: 801px) {
-    .hide-from-desktop {
+    .hide-for-desktop {
       display: none;
     }
   }
