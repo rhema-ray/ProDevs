@@ -570,12 +570,10 @@ a:hover {
   
     .mobile h2 {
       font-size: 2rem;
-      /* font-weight: 400; */
-      /* text-align: left; */
     }
   
     .stack-icon {
-      gap: 5rem;
+      gap: 4rem;
     }
   
     .stack-icon img {
