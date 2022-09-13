@@ -5,7 +5,6 @@ thing rhema doesn't understand will have 🙋‍♂️ on it or the element
 selector
 */
 
-
 /* RESETS */
 * {
   box-sizing: border-box;
@@ -29,8 +28,7 @@ selector
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  background-color: hsla(102, 43%, 72%, 1);
-
+  /* background-color: hsla(102, 43%, 72%, 1); */
 }
 
 /* 🙋‍♂️ What does this do?? */
@@ -39,11 +37,12 @@ body {
 }
 
 /* HEADER */
-.overlay {/*🙋‍♂️ */
+.overlay {
+  /*🙋‍♂️ */
   opacity: 0;
   position: fixed;
   top: 0;
-  right: 0; 
+  right: 0;
   bottom: 0;
   left: 0;
   background-image: linear-gradient(#49673c, transparent);
@@ -69,21 +68,24 @@ nav {
   color: var(--navy);
 }
 
-nav ul {
-  list-style: none;
+
+header nav ul {
   display: flex;
   justify-content: center;
 }
 
-nav li:not(:last-child) {
+header nav li:not(:last-child) {
   margin-right: 4.8rem;
 }
 
-nav ul li a {
+
+
+header nav ul li a {
+ main
   color: var(--navy);
 }
 
-li {
+header nav ul li {
   position: relative;
 }
 
@@ -208,22 +210,6 @@ a:hover {
   text-align: center;
 }
 
-/* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
-
-@media (max-width: 800px) {
-  nav {
-    padding: 2rem 2.5rem;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  .toggle {
-    display: block;
-  }
-}
-
 
 /* HERO SECTION */
 .hero-section {
@@ -231,12 +217,14 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  margin: 50px 100px 2.5rem;
+  /* height: 100vh; */
+  padding: 5rem 10rem 5rem;
 }
 
 .text {
   text-align: left;
   grid-row: 3/1;
+  margin-bottom: 2rem;
 }
 
 .text > h1 {
@@ -246,154 +234,36 @@ a:hover {
   font-size: 5.6rem;
   color: var(--white);
 }
-
 .text p {
   font-size: 1.6rem;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
 
-.image {
-  width: 100%;
+.static-text {
+  line-height: 1.1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 5.6rem;
+  color: #fff;
 }
 
-.image img {
-  height: 100%;
-  width: 100%;
-}
-
-.text button {
-  display: flex;
-  align-items: center;
-  background-color: hsla(102, 43%, 72%, 1);
-  color: var(--navy);
-  border: 1px solid #546464;
-  padding: 10px 15px;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-  border-radius: 30px;
-  transition: all 0.3s ease-in-out;
-}
-
- /* .text button:hover {
-  border: 1px solid white;
-}  */
-
-.svg {
-  background-image: url(Image/arrow-and-circle.svg);
-  background-size: cover;
-  margin-left: 10px;
-  width: 30px;
-  height: 30px;
-  transition: all 0.3s ease-in-out;
-}
-
-.svg:hover {
-  background-image: url(Image/arrow.svg);
-}
-
-
-/* MEDIA QUERY FOR THE H1 */
-@media (min-width: 800px) {
-  .hide-from-desktop {
-    display: none;
-  }
-}
-
-
-/* MEDIA QUERY FOR THE HERO SECTION */
-@media (max-width: 800px) {
-  /* main {
- 
-  } */
-
-  .hero-section {
-    margin: 50px 20px 0;
-    grid-template-columns: 1fr;
-  }
-
- .text {
-    text-align: center;
-    grid-row: 3/4;
-  } 
-
-  .text button {
-    margin: 0 auto;
-  }
-
- .text .hide-from-desktop {
-    font-size: 3.59rem;
-  }
-
-  .hide-from-mobile {
-    display: none;
-  }
-}
-
-/* STACK SECTION */
-.stack {
-  background-color: var(--white);
-  padding-top: 10rem;
-  width: 100%;
-  text-align: center;
-}
-
-.stack > h2 {
-  margin-bottom: 2rem;
-}
-
-.stack-icon {
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  gap: 150px;
-}
-
-
-/* ABOUT SECTION */
-
-.about-section {
-  background-color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  width: 100vw;
-  background-color: #fff;
-}
-
-.wrapper {
-  display: inline-flex;
-  padding: 1%;
-  justify-content: center;
-  gap: 10px;
-  padding-right: 45px;
-  width: 100%;
-  /* margin: 0 auto; */
-  /* margin-top: 50px; */
-}
-
-.wrapper .static-text {
-  color: #000;
-  font-size: 52px;
-  font-weight: 700;
-}
-
-.wrapper .dynamic-text {
+.dynamic-text {
   margin-left: 5px;
   margin-top: 5px;
-  line-height: 52px;
-  height: 52px;
+  margin-bottom: 30px;
+  line-height: 60px;
+  height: 62px;
   overflow: hidden;
 }
 
 .dynamic-text li {
-  color: #abd699;
+  color: #fff;
+  line-height: 1.1;
+  font-weight: bold;
   list-style: none;
-  font-size: 52px;
-  font-weight: 700;
+  font-size: 5.6rem;
   position: relative;
   top: 0;
   animation: slide 15s ease infinite;
@@ -419,3 +289,462 @@ a:hover {
   /* border-left: 2px solid #f7db08; */
   animation: slide 5s steps(20) infinite;
 }
+
+
+.image {
+  width: 100%;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+}
+
+.text button {
+  display: flex;
+  align-items: center;
+  background-color: hsla(102, 43%, 72%, 1);
+  color: var(--navy);
+  border: 1px solid #546464;
+  padding: 10px 15px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.svg {
+  background-image: url(Image/arrow-and-circle.svg);
+  background-size: cover;
+  margin-left: 1rem;
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.svg:hover {
+  background-image: url(Image/arrow.svg);
+}
+
+/* STACK SECTION */
+.stack {
+  background-color: var(--white);
+  padding: 10rem 10rem 10rem;
+  width: 100%;
+  text-align: center;
+}
+
+.stack > h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.stack-icon {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  background-color: #fff;
+  padding: 5rem 10rem 12rem;
+}
+
+.left > p {
+  color: hsla(134, 13%, 67%, 1);
+  margin-bottom: 0.5rem;
+  font-size: 2.1rem;
+}
+
+.left h2 {
+  font-size: 3.4rem;
+}
+
+.right p {
+  margin-top: 7rem;
+}
+
+
+/* TEAM SECTION */
+.team {
+  padding: 10rem;
+  background-color: hsla(102, 43%, 72%, 1);
+  text-align: center;
+}
+
+
+.team > h2 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.team .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  width: 33rem;
+  border-radius: .8rem;
+  padding: 2rem;
+}
+
+
+.card > img {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.card h3 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+.card p {
+  margin-bottom: 1.8rem;
+  font-size: 1.6rem;
+}
+
+.details {
+  text-align: center;
+  width: 28.5rem;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+}
+
+.connect a:hover {
+  text-decoration: underline;
+}
+
+.connect > .contacts:not(:last-child) {
+  margin-bottom: .8rem;
+}
+
+.contacts {
+  display: flex;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.contacts > .el {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.el:hover {
+  text-decoration: none;
+}
+
+.team .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.keek {
+  transform: rotate(-45deg);
+}
+
+.sturner {
+  transform: rotate(-15deg);
+}
+
+
+/* CONTACT US  */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 10rem 10rem 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact h3 {
+  font-size: 3rem;
+  place-self: flex-end;
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  background: hsla(238, 22%, 31%, 1);
+  padding: 1.2rem;
+  text-align: center;
+  color: white;
+  width: 22rem;
+  grid-row: 3/2;
+  grid-column: 3/2;
+}
+
+.contact img {
+  margin-left: 2rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  /* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
+  nav {
+    padding: 2rem 2.5rem;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+
+  /* MEDIA QUERY FOR THE HERO SECTION */
+  .hero-section {
+    padding: 5rem 2rem 5rem;
+    grid-template-columns: 1fr; 
+
+  }
+
+  .text {
+    text-align: center;
+    grid-row: 3/4;
+  }
+
+  .text button {
+    margin: 0 auto;
+  }
+
+ .dynamic-text h1 {
+    font-size: 3.59rem;
+  }
+
+  .hide-for-mobile {
+    display: none;
+  }
+
+  /* MEDIA QUERY FOR THE ABOUT SECTION */
+  .about-section {
+    padding: 5rem 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-section h2 {
+    font-size: 2.8rem;
+  }  
+
+  .about-section .right p {
+    margin-top: 2.5rem;
+    text-align: left;
+  }
+
+    /* mobile STACK SECTION */
+    .mobile {
+      padding: 0rem 2rem 5rem;
+    }
+  
+    .mobile h2 {
+      font-size: 2rem;
+    }
+  
+    .stack-icon {
+      gap: 4rem;
+    }
+  
+    .stack-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+  /* TEAM SECTION */
+   .team {
+    padding: 5rem 2rem 5rem;
+   }
+
+  .team .top,
+  .bottom {
+    flex-direction: column;
+  }
+
+/* CONTACT US SECTION */
+  .contact {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem 5rem;
+  }
+  .contact h3 {
+    font-size: 3rem;
+    place-self: flex-start;
+    margin-bottom: 3rem;
+  }
+   
+  .contact a {
+    place-self: flex-end;
+  }
+}
+
+
+  /* MEDIA QUERY FOR THE H1 */
+  @media (min-width: 801px) {
+    .hide-for-desktop {
+      display: none;
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* IN AND OUT TEXT */
+/* 
+.text-center-two {
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: var(--black);
+  text-transform: uppercase;
+  height: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 30px;
+}
+
+.tech-container {
+  height: 200px;
+  width: 100vw;
+  background-color: var(--white);
+  padding: 20px;
+}
+
+.technology {
+  position: relative;
+  height: 200px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.technology h2 {
+  position: absolute;
+  width: 100vw;
+  height: 90%;
+  margin: 0;
+  padding: 0;
+  font-size: 4em;
+  color: var(--black);
+  font-family: 'Montserrat';
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100px;
+  transform: translateX(100%);
+  animation: scrolling 15s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
