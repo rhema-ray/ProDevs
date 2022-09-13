@@ -223,10 +223,24 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.text > h1 {
+  line-height: 1.1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 5.6rem;
+  color: var(--white);
+}
+.text p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
 .static-text {
   line-height: 1.1;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: bold;
   font-size: 5.6rem;
   color: #fff;
 }
@@ -242,6 +256,7 @@ a:hover {
 
 .dynamic-text li {
   color: #fff;
+  font-weight: bold;
   list-style: none;
   font-size: 5.6rem;
   position: relative;
@@ -490,26 +505,6 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 800px) {
   /* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
   nav {
@@ -558,13 +553,78 @@ a:hover {
   }
   
   
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 /* IN AND OUT TEXT */
-
+/* 
 .text-center-two {
   text-align: center;
   font-family: 'Montserrat';
@@ -616,7 +676,7 @@ a:hover {
   100% {
     transform: translateX(-100%);
   }
-}
+} */
 
 
 
