@@ -68,21 +68,20 @@ nav {
   color: var(--navy);
 }
 
-nav ul {
-  list-style: none;
+header nav ul {
   display: flex;
   justify-content: center;
 }
 
-nav li:not(:last-child) {
+header nav li:not(:last-child) {
   margin-right: 4.8rem;
 }
 
-nav ul li a {
+header nav ul li a {
   color: var(--navy);
 }
 
-li {
+header nav ul li {
   position: relative;
 }
 
@@ -206,6 +205,7 @@ a:hover {
   padding: 1rem;
   text-align: center;
 }
+
 
 /* HERO SECTION */
 .hero-section {
@@ -504,7 +504,6 @@ a:hover {
 }
 
 
-
 @media (max-width: 800px) {
   /* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
   nav {
@@ -518,6 +517,8 @@ a:hover {
   .toggle {
     display: block;
   }
+}
+
 
   /* MEDIA QUERY FOR THE HERO SECTION */
   .hero-section {
@@ -545,6 +546,7 @@ a:hover {
 
   /* MEDIA QUERY FOR THE STACK SECTION  */
 }
+
   /* MEDIA QUERY FOR THE H1 */
   @media (min-width: 801px) {
     .hide-from-desktop {
@@ -677,78 +679,4 @@ a:hover {
     transform: translateX(-100%);
   }
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
