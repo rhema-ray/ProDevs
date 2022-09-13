@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>"
+    />
+
+<!-- FONT AWESOME  -->
+    <script src="https://kit.fontawesome.com/c190620e84.js" crossorigin="anonymous"></script>
+
     <title>ProDevs</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- HEADER SECTION -->
     <header class="header">
-        <div class="overlay has-fade"></div>
-        <nav class="navbar">
-            <!-- NAVBAR -->
-            <span class="logo">{ProDevs}</span> <!-- ANY BETTER SUGGESTION FOR THE LOGO -->
 
-            <ul>
-                <li><a href="#">Home</a><hr></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">team</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+      <div class="overlay has-fade"></div>
+      <nav class="navbar">
+        <!-- NAVBAR -->
+        <span class="logo">{ProDevs}</span>
+        <!-- ANY BETTER SUGGESTION FOR THE LOGO -->
 
-            <a id="btnHamburger" href="#" class="toggle">
-                <!-- HAMBURGER MENU -->
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+        <a id="btnHamburger" href="#" class="toggle">
+          <!-- HAMBURGER MENU -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
 
-            <ul>
-                <!-- NAVBAR LIST  -->
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Crew</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="menu has-fade">
-            <!-- TOOGLE MENU -->
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Crew</a>
-            <a href="#">Contact</a>
-        </div>
+        <ul>
+          <!-- NAVBAR LIST  -->
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Crew</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu has-fade">
+        <!-- TOOGLE MENU -->
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Crew</a>
+        <a href="#">Contact</a>
+      </div>
+
     </header>
     <main>
+      <!-- HERO SECTION -->
+    <!--  <section class="hero-section">
+        <div class="image">
+          <img src="Image/Wavy-Buddies-Address.svg" alt="" />
+        </div>
+        <div class="text">
+          <h1 class="hide-from-mobile">We're <br /> Developers </h1>
+          <h1 class="hide-from-desktop">We're Developers</h1>
+          <p>
+            We are a software development team dedicated to solving the world’s
+            biggest problems one line of code at a time.
+          </p>
+          <button>
+            Learn More
+            <div class="svg"></div>
+          </button>
+        </div>
+      </section> -->
 
         <!-- HERO SECTION -->
         <section class="hero-section">
@@ -57,44 +76,147 @@
                 <img src="Image/Wavy-Buddies-Address.svg" alt="">
             </div>
             <div class="text">
-                <h1 class="hide-from-mobile">We're <br> Developers</h1>
-                <h1 class="hide-from-desktop">We're Developers</h1>
-                <p>We are a software development team dedicated to solving the world’s biggest problems one line of code
-                    at a time.</p>
+              <h1 class="hide-from-desktop">We're Developers</h1>
+                <div class="static-text hide-from-mobile">We're</div>
+                <ul class="dynamic-text hide-from-mobile">
+                    <li><span>Developers</span></li>
+                    <li><span>Designers</span></li>
+                    <li><span>Teachers</span></li>
+                    <li><span>Enthusiats</span></li>
+                    <li><span>Diverse</span></li> 
+                    <li><span>PRO DEVS</span></li>                   
+                </ul>
+                <p>
+                  We are a software development team dedicated to solving the world’s
+                  biggest problems one line of code at a time.
+                </p>
                 <button>Learn More <div class="svg"></div></button>
             </div>
         </section>
 
+      <!-- STACK -->
+      <section class="stack hide-from-mobile">
+        <h2>Our Stack</h2>
+        <div class="stack-icon">
+          <img src="Image/git.svg" alt="git" />
+          <img src="Image/figma.svg" alt="figma" />
+          <img src="Image/html.svg" alt="html" />
+          <img src="Image/css.svg" alt="css" />
+          <img src="Image/javascript.svg" alt="javascript" />
+        </div>
+      </section>
 
-        <!-- ABOUT SECTION -->
-        <!-- <section class="about-section hide-from mobile">
-            <div class="wrapper">
-                <div class="static-text">Not just Developers. We're</div>
-                <ul class="dynamic-text">
-                    <li><span>Designers</span></li>
-                    <li><span>Teachers</span></li>
-                    <li><span>Enthusiats</span></li>
-                    <li><span>Diverse</span></li>
-                    <li><span>Resourceful</span></li>
-                    <li><span>PRO DEVS</span></li>
-                </ul>
-            </div>
-            </div>
-        </section> -->
 
-                       <!-- STACK -->
-                       <section class="stack">
-                        <h2>Our Stack</h2>
-                        <div class="stack-icon">
-                            <img src="Image/git.svg" alt="git">
-                            <img src="Image/figma.svg" alt="figma">
-                            <img src="Image/html.svg" alt="html">
-                            <img src="Image/css.svg" alt="css">
-                            <img src="Image/javascript.svg" alt="javascript">
-                        </div>
-                    </section>
+      <!-- ABOUT SECTION -->
+      <section class="about-section">
+        <div class="left">
+            <p>About Us</p>
+            <h2>Dedicated to Solving Big Problems</h2>
+        </div>
+        <div class="right">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quae incidunt provident, quod deserunt omnis laboriosam! Quas repudiandae sunt facere quibusdam similique molestiae nesciunt, error quis distinctio. 
+            Officia, quis id ipsum, quo labore dolorem natus qui illo ut maxime consequuntur quasi adipisci molestias</p>
+        </div>
+      </section>
+
+      <!-- TEAM SECTION -->
+      <section class="team hide-from-mobile">
+        <h2>Our Team</h2>
+          <div class="top">
+            <!-- AY -->
+            <div class="card">
+              <img src="Image/Mr-AY.png" alt="Mr Ayodeji">
+              <div class="details">
+                <h3>Ayodeji Akintubi</h3>
+                <p>Frontend Developer</p>
+                <div class="connect">
+                 <div class="contacts"><i class="el fa-solid fa-envelope"></i> <a class="contacts" href="mailto:akintubiayodeji@gmail.com">akintubiayodeji@gmail.com</a></div>
+                 <div class="contacts"><i class="el fa-brands fa-github"></i><a class="contacts" href="https://github.com/OldieCoder">OldieCoder</a></div> 
+                 <div class="contacts"><i class="el fa-brands fa-twitter"></i><a class="contacts" href="https://twitter.com/the_tech_writer">@the_tech_writer</a></div> 
+                </div>
+              </div>
+              
+            </div>
+            <!-- FINNEY -->
+            <div class="card">
+              <img src="Image/Finney.jpg" alt="Mr Finney">
+              <div class="details">
+                <h3>Osajere Finney</h3>
+                <p>Frontend Developer</p>
+                <div class="connect">
+                 <div class="contacts"><i class="el fa-solid fa-envelope"></i><a class="contacts" href="mailto:osafinney21@gmail.com">osafinney21@gmail.com</a></div> 
+                 <div class="contacts"><i class="el fa-brands fa-github"></i><a class="contacts" href="https://github.com/Finney06">finney06</a></div>
+                 <div class="contacts"><i class="el fa-brands fa-twitter"></i><a class="contacts" href="https://twitter.com/osa_finney">@Osa_finney</a></div>
+                </div>
+              </div>
+            </div>
+            <!-- KEEK -->
+            <div class="card">
+              <img class="keek" src="Image/Keek.JPG" alt="Miss Keek">
+              <div class="details">
+                <h3>Keek Duff</h3>
+                <p>Frontend Developer</p>
+                <div class="connect">
+                 <div class="contacts"><i class="el fa-solid fa-envelope"></i><a class="contacts" href="mailto:keekeeduff@gmail.com">keekeeduff@gmail.com</a></div> 
+                 <div class="contacts"><i class="el fa-brands fa-github"></i><a class="contacts" href="https://github.com/brainykeek">brainykeek</a></div> 
+                 <div class="contacts"><i class="el fa-brands fa-twitter"></i><a class="contacts" href="https://twitter.com/brainykeek">@brainykeek</a></div> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <!-- RHEMA CARD -->
+            <div class="card">
+              <img src="Image/profilePhoto.png" alt="Mr ">
+              <div class="details">
+                <h3>Rhema...</h3>
+                <p>Frontend Developer</p>
+                <div class="connect">
+                 <div class="contacts"><i class="el fa-solid fa-envelope"></i><a class="contacts" href="mailto:">example@gmail.com</a></div> 
+                 <div class="contacts"><i class="el fa-brands fa-github"></i><a class="contacts" href="https://github.com/rhema-ray"></i></i>rhema-ray</a></div> 
+                 <div class="contacts"><i class="el fa-brands fa-twitter"></i><a class="contacts" href="https://twitter.com/ezebuffbaby">@ezebuffbaby</a></div> 
+                </div>
+              </div>
+            </div>
+            <!-- STURNER CARD-->
+            <div class="card">
+              <img class="sturner" src="Image/Sturner.jpg" alt="Mr Sturner">
+              <div class="details">
+                <h3>Ogbuagu Kizito</h3>
+                <p>Frontend Developer</p>
+                <div class="connect">
+                 <div class="contacts"><i class="el fa-solid fa-envelope"></i> <a class="contacts" href="mailto:ogbuagukizito16@gmail.com">ogbuagukizito16@gmail.com</a></div>
+                 <div class="contacts"><i class="el fa-brands fa-github"></i></i><a class="contacts" href="https://github.com/Ogbuagukizito">Ogbuagukizito</a></div> 
+                 <div class="contacts"><i class="el fa-brands fa-twitter"></i><a class="contacts" href="https://twitter.com/its_sturner">@its_sturner</a></div> 
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+
+
+
+<!-- IN AND OUT TEXT -->
+
+<!-- 
+        <div>
+            <h2 class="text-center-two">Tech Stack</h2>
+        </div>
+        <div class="tech-container">
+            <div class="technology">
+                <h2>Designers, Engineers, Developers, Pro Devs</h2>
+            </div>
+        </div>  -->
+        
+      <!-- CONTACT US -->
+      <section class="contact">
+        <h3>Need A Project?</h3>
+        <a class="">Contact Us <img src="Image/arrow-right-solid@2x.svg" alt=""></a>
+      </section>
+
     </main>
-</body>
-<script src="app/script.js"></script>
-
+  </body>
+  <script src="app/script.js"></script>
 </html>
+ 
