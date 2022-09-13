@@ -213,7 +213,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   padding: 5rem 10rem 5rem;
 }
 
@@ -260,9 +260,6 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
-/* .text button:hover {
-  border: 1px solid white;
-}  */
 
 .svg {
   background-image: url(Image/arrow-and-circle.svg);
@@ -495,7 +492,8 @@ a:hover {
   /* MEDIA QUERY FOR THE HERO SECTION */
   .hero-section {
     padding: 50px 20px 0;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
+
   }
 
   .text {
@@ -595,108 +593,4 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .wrapper {
-  display: inline-flex;
-  padding: 1%;
-  justify-content: center;
-  gap: 10px;
-  padding-right: 45px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
-.wrapper .static-text {
-  color: #000;
-  font-size: 52px;
-  font-weight: 700;
-}
-
-.wrapper .dynamic-text {
-  margin-left: 5px;
-  margin-top: 5px;
-  line-height: 52px;
-  height: 52px;
-  overflow: hidden;
-}
-
-.dynamic-text li {
-  color: #abd699;
-  list-style: none;
-  font-size: 52px;
-  font-weight: 700;
-  position: relative;
-  top: 0;
-  animation: slide 15s ease infinite;
-}
-
-@keyframes slide {
-  100% {
-    top: -360px;
-  }
-}
-
-.dynamic-text li span {
-  position: relative;
-}
-
-.dynamic-text li span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: transparent;
-  border-left: 2px solid #f7db08;
-  animation: slide 5s steps(20) infinite;
-} */
 
