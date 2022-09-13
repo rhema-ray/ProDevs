@@ -256,6 +256,7 @@ a:hover {
 
 .dynamic-text li {
   color: #fff;
+  line-height: 1.1;
   font-weight: bold;
   list-style: none;
   font-size: 5.6rem;
@@ -504,6 +505,7 @@ a:hover {
   margin-left: 2rem;
 }
 
+/* MEDIA QUERIES */
 
 @media (max-width: 800px) {
   /* MEDIA QUERY FOR THE NAVBAR MOBILE VIEW PORT */
@@ -518,7 +520,6 @@ a:hover {
   .toggle {
     display: block;
   }
-
 
 
   /* MEDIA QUERY FOR THE HERO SECTION */
@@ -537,17 +538,17 @@ a:hover {
     margin: 0 auto;
   }
 
-  .text .hide-from-desktop {
+ .dynamic-text h1 {
     font-size: 3.59rem;
   }
 
-  .hide-from-mobile {
+  .hide-for-mobile {
     display: none;
   }
 
   /* MEDIA QUERY FOR THE ABOUT SECTION */
   .about-section {
-    padding: 5rem 2rem 5rem;
+    padding: 5rem 2rem 2.5rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -562,6 +563,26 @@ a:hover {
     text-align: left;
   }
 
+    /* mobile STACK SECTION */
+    .mobile {
+      padding: 0rem 2rem 5rem;
+    }
+  
+    .mobile h2 {
+      font-size: 2rem;
+      /* font-weight: 400; */
+      /* text-align: left; */
+    }
+  
+    .stack-icon {
+      gap: 5rem;
+    }
+  
+    .stack-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
   /* TEAM SECTION */
    .team {
     padding: 5rem 2rem 5rem;
@@ -571,6 +592,7 @@ a:hover {
   .bottom {
     flex-direction: column;
   }
+
 /* CONTACT US SECTION */
   .contact {
     display: flex;
@@ -589,10 +611,9 @@ a:hover {
 }
 
 
-
   /* MEDIA QUERY FOR THE H1 */
   @media (min-width: 801px) {
-    .hide-from-desktop {
+    .hide-for-desktop {
       display: none;
     }
   }
