@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@600;700&family=Ubuntu:wght@700&display=swap");
+/* mada */
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@300;400;500;600&display=swap');
 
-/*
-thing rhema doesn't understand will have 🙋‍♂️ on it or the element
-selector
-*/
 
 /* RESETS */
 * {
@@ -29,7 +27,7 @@ selector
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "mada";
   font-size: 1.6rem;
   /* background-color: hsla(102, 43%, 72%, 1); */
 }
@@ -55,10 +53,16 @@ body {
 }
 
 /* used it for the linear gradient */
-main{
+.gradient{
+  position: absolute;
+  width: 100%;
+  z-index: 0;
   background: linear-gradient(180deg, #ABD699 38.23%, rgba(255, 255, 255) 84.15%);
   height: 191vh;
   max-height: 191vh;
+}
+section{
+  position: relative;
 }
 
 /*HEADER*/
@@ -66,6 +70,7 @@ main{
 header{
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
 
@@ -293,7 +298,6 @@ margin-bottom: 1.5rem;
 -webkit-text-stroke-width:  .7px; 
 }
 
-
 section.section-1 .text p {
   font-size: 1.7rem;
   font-family: mada;
@@ -303,6 +307,7 @@ section.section-1 .text p {
   color: var(--black-100);
   margin-bottom: 2rem;
 }
+
 /* learn more button */
 section.section-1 .text button {
   align-items: center;
@@ -310,9 +315,9 @@ section.section-1 .text button {
   font-size: 1.5rem;
   display: flex;
   background-color:transparent;
-  /* border: 1px solid #5C6E6E; */
   border: transparent;
   border-radius: 30px;
+  /* border: 1px solid #5C6E6E; */
   /* padding: 10px 20px; */
   gap: 12px;
   opacity: 5;
@@ -358,37 +363,57 @@ section.section-1 .hero-image img {
   width: 100%;
 }
 
-/* STACK SECTION */
-.stack {
-  padding:  15rem 10rem 15rem;
+
+/*********
+* Section-2: our stack
+*/
+
+section.section-2{
   width: 100%;
-  text-align: center;
+  display:flex ;
+  flex-direction: column;
+  place-items: center;
+  margin: 9em auto 0;
+  /* padding:  15rem 10rem 15rem; */
+  /* text-align: center; */
 }
 
-.stack > h2 {
-  margin-bottom: 2rem;
-  font-size: 3rem;
+section.section-2 h2 {
+  margin-bottom: 3.7rem;
+  font-family: inter;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: #bcbfba;
 }
 
-.stack-icon {
+section.section-2 .stack-icon {
   display: flex;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  gap: 12rem;
+  gap: 10em;
 }
 
-/* ABOUT SECTION */
-.about-section {
+section.section-2 .stack-icon img{
+  height: 44px;
+}
+
+
+/*******
+*Section-3: about us
+*/
+
+section.section-3 {
+  margin: 12em auto 0;
   display: grid;
   grid-template-columns: 1fr 1.7fr;
     padding: 50px 100px 5rem;
 }
 
-.left > p {
-  color: hsla(134, 13%, 67%, 1);
-  margin-bottom: 0.5rem;
-  font-size: 2.1rem;
+section.section-3 h4 {
+  font-family: inter;
+  color: #bcbfba;
+  font-weight: 500;
 }
 
 .left h2 {
@@ -579,18 +604,18 @@ section.section-1 .hero-image img {
   }
 
   /* MEDIA QUERY FOR THE ABOUT SECTION */
-  .about-section {
+  section.section-3 {
     padding: 5rem 2rem 2.5rem;
     display: flex;
     flex-direction: column;
     text-align: center;
   }
 
-  .about-section h2 {
+  section.section-3 h2 {
     font-size: 2.8rem;
   }  
 
-  .about-section .right p {
+  section.section-3 .right p {
     margin-top: 2.5rem;
     text-align: left;
   }
@@ -669,7 +694,7 @@ section.section-1 .hero-image img {
 
 /* MEDIA QUERY FOR THE HERO SECTION */
 @media (max-width: 800px) {
-  /* main {
+  /* .gradient {
 
 
 
@@ -777,3 +802,4 @@ section.section-1 .hero-image img {
   }
 } */
 
+}
