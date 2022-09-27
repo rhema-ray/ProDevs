@@ -20,8 +20,9 @@
   --mint: hsl(134, 24%, 82%);
   --navy: hsl(245, 56%, 16%);
   --white: hsl(0, 0%, 100%);
-  --black-100: #4F4F4F;
-  --black-200: #3D3D3D;
+  --black-100: #6F6F6F;
+  --black-200: #4F4F4F;
+  --black-300: #3D3D3D;
   --black-800: #000;
   font-size: 62.5%;
 }
@@ -55,7 +56,7 @@ body {
 /* used it for the linear gradient */
 .gradient{
   position: absolute;
-  width: 100%;
+  width: 100vw;
   z-index: 0;
   background: linear-gradient(180deg, #ABD699 38.23%, rgba(255, 255, 255) 84.15%);
   height: 191vh;
@@ -117,12 +118,11 @@ header nav ul li:first-child a{
 }
 
 header nav ul li hr{
-  background-color: #000;
-  height: 1.5px;
-  margin-top: 3px;
+  background-color:var(--black-100);
+  height: 1.7px;
   width: 0;
   visibility: hidden;
-  border-radius: 3px;
+  border-radius: 10px;
   transition: .5s ease-in-out width,.5s;
   outline: none;
   border: none;
@@ -140,11 +140,12 @@ header nav ul li:first-child hr {
 header nav ul:hover li:first-child:not(:hover) hr  {
   width: 0%;
   visibility: hidden;
-  transition:  .1s .5s visibility;
+  /* transition:  .1s .5s visibility; */
 
 }
 header nav ul:hover li:first-child:not(:hover) a {
-color: #546464;
+/* color: #546464; */
+color: var(--black-100);
 }
 
 header nav ul li:hover:not(:first-child) hr  {
@@ -153,7 +154,7 @@ header nav ul li:hover:not(:first-child) hr  {
 }
 header nav ul li:hover:not(:first-child) a {
   /* font-weight: 600; *//* commented it out because it does a weird snapping effect */
-  color: var(--black-200);
+  color: var(--black-800);
 }
 
 li {
@@ -175,6 +176,7 @@ li {
   background-color: #1f1f1f;
   transition: all ease-in-out 200ms;
   transform-origin: 0.15rem 0.15rem;
+  
 }
 
 .toggle span:not(:last-child) {
@@ -286,7 +288,7 @@ font-family: airbnb;
 font-size: 5.6rem;
 font-weight: 500;
 line-height: .9;
-color: var(--black-200);
+color: var(--black-300);
 margin-bottom: 1.5rem;
 }
 
@@ -304,7 +306,7 @@ section.section-1 .text p {
   font-weight: 400;
   width: 90%;
   line-height: 1.5;
-  color: var(--black-100);
+  color: var(--black-200);
   margin-bottom: 2rem;
 }
 
@@ -374,12 +376,12 @@ section.section-2{
   flex-direction: column;
   place-items: center;
   margin: 9em auto 0;
+  gap: 3.7rem;
   /* padding:  15rem 10rem 15rem; */
   /* text-align: center; */
 }
 
 section.section-2 h2 {
-  margin-bottom: 3.7rem;
   font-family: inter;
   font-size: 1.9rem;
   font-weight: 400;
@@ -391,11 +393,11 @@ section.section-2 .stack-icon {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  gap: 10em;
+  gap: 9em;
 }
 
 section.section-2 .stack-icon img{
-  height: 44px;
+  height: 33px;
 }
 
 
@@ -405,39 +407,62 @@ section.section-2 .stack-icon img{
 
 section.section-3 {
   margin: 12em auto 0;
-  display: grid;
-  grid-template-columns: 1fr 1.7fr;
-    padding: 50px 100px 5rem;
+  display: flex;
+  width: fit-content;
+  place-content: center;
+  gap: 35px;
 }
 
-section.section-3 h4 {
+section.section-3 .header {
+  min-width:300px;
+  width: fit-content;
+  height: fit-content;
+}
+
+section.section-3 .header h4 {
   font-family: inter;
   color: #bcbfba;
   font-weight: 500;
 }
 
-.left h2 {
+section.section-3 .header h2 {
+  /* width: 300px; */
+  /* width:clamp(90vh, auto, 90vh); */
+  width:clamp(300px, 29.14vw, 398px);
+  font-family: airbnb;
+  font-weight: 600;
+  color: var(--black-200);
   font-size: 3.4rem;
 }
 
-.right p {
-  margin-top: 7rem;
+section.section-3 p{
+  /* width: 500px; */
+  /* width:clamp(calc(100vw - 100px), 36.60vw, 500px); */
+  width: clamp(300px, 43.92vw, 600px);
+  margin-top: 70px; /* remove this in mobile */
+  color: var(--black-300);
 }
 
 
-/* TEAM SECTION */
-.team {
+/*****
+*section 4: our team
+*/
+
+section.section-4 {
+  margin-top: 150px;
   padding: 10rem;
-  background-color: hsla(102, 43%, 72%, 1);
   text-align: center;
 }
 
-.team > h2 {
+section.section-4 h2 {
   margin-bottom: 3rem;
   font-size: 3rem;
+  font-weight: 500;
+  font-family: airbnb;
+  color: var(--black-100);
 }
 
-.team .top {
+section.section-4 .top {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -514,7 +539,7 @@ section.section-3 h4 {
   text-decoration: none;
 }
 
-.team .bottom {
+section.section-4 .bottom {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -639,11 +664,11 @@ section.section-3 h4 {
     }
 
   /* TEAM SECTION */
-   .team {
+   section.section-4 {
     padding: 5rem 2rem 5rem;
    }
 
-  .team .top,
+  section.section-4 .top,
   .bottom {
     flex-direction: column;
   }
