@@ -1,7 +1,7 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Mada:wght@400;500&display=swap');
 
-@font-face {
+@font-face { /*delete*/
   font-family: airbnb cereal;
   src: url('airbnb-cereal/AirbnbCerealLight.ttf');
   font-style: normal;
@@ -30,14 +30,14 @@
   font-weight: 600;
 }
 
-@font-face {
+@font-face {/*delete*/
   font-family: airbnb;
   src: url('airbnb-cereal/AirbnbCerealExtraBold.ttf');
   font-style: normal;
   font-weight: 700;
 }
 
-@font-face {
+@font-face {/*delete*/
   font-family: airbnb;
   src: url('airbnb-cereal/AirbnbCerealBlack.ttf');
   font-style: normal;
