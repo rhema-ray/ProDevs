@@ -27,7 +27,6 @@
   --black-800: #000;
   font-size: 62.5%;
   --hero-max-width: 1173px;
-  --p-text:clamp(1.6rem, 12px, 1.8rem)
 }
 
 body {
@@ -88,7 +87,7 @@ header.main-header nav {
   justify-content: space-between;
   margin: 2.5em auto 2em;
   width: 87%;
-  max-width: var(--hero-max-width);
+  max-width: calc(var(--hero-max-width) - 3%);
   position: relative;
   /* background-color: hsla(102, 43%, 72%, 1); */
   /* padding: 2rem 15rem 2rem 4rem; */
@@ -408,8 +407,7 @@ section.section-2 .stack-icon img{
 */
 
 section.section-3 {
-  margin: 0 auto 0;
-  padding-top: 12em;
+  margin: 244px auto 0;
   display: flex;
   width: fit-content;
   place-content: center;
@@ -445,21 +443,42 @@ section.section-3 p{
   /*margin-top: clamp(300px, 3.92vw, 600px);*/ /* remove this in mobile */
   margin-top: 109px; /* remove this in mobile */
   color: var(--black-300);
-  font-size: var(--p-text);
+  font-size: 1.7rem;
 }
 
 
 /*****
-*section 4: our team
+*section 4: marquee
 */
 
-section.section-4 {
+section.section-4{
+  width: 100%;
+  margin: 244px 0;
+}
+
+section.section-4 ul{
+  display: flex;
+}
+
+section.section-4 .ellipse{
+box-sizing: border-box;
+width: 20px;
+height: 20px;
+background: #EEEEEE;
+border-radius: 20px;
+}
+
+/*****
+*section 5: our team 
+*/
+
+section.section-5 {
   margin-top: 150px;
   padding: 10rem;
   text-align: center;
 }
 
-section.section-4 h2 {
+section.section-5 h2 {
   margin-bottom: 3rem;
   font-size: 3rem;
   font-weight: 500;
@@ -467,7 +486,7 @@ section.section-4 h2 {
   color: var(--black-100);
 }
 
-section.section-4 .top {
+section.section-5 .top {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -544,7 +563,7 @@ section.section-4 .top {
   text-decoration: none;
 }
 
-section.section-4 .bottom {
+section.section-5 .bottom {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -669,11 +688,11 @@ section.section-4 .bottom {
     }
 
   /* TEAM SECTION */
-   section.section-4 {
+   section.section-5 {
     padding: 5rem 2rem 5rem;
    }
 
-  section.section-4 .top,
+  section.section-5 .top,
   .bottom {
     flex-direction: column;
   }
