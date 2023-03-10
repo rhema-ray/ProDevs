@@ -53,7 +53,7 @@
   <section class="section-1">
 
       <div class="text">
-          <h1 class=""><span>We're</span><br> Developers.</h1>
+          <h1 class=""><span>We're</span><br>Developers.</h1>
           <p>We are a software development team dedicated to solving the world’s biggest problems one line of code
               at a time.</p>
           <button>scroll down <img src="Image/arrow-down.svg" alt="" class="arrow-down"></button>
@@ -113,19 +113,34 @@
 
     <li>Designers</li>
     <span class="ellipse"></span>
-    
+
     <li>Prodevs</li>
     <span class="ellipse"></span>
-    
+
     <li>engineers</li>
     <span class="ellipse"></span>
-    
+
     <li>Prodevs</li>
     <span class="ellipse"></span>
-    
+
     <li>developers</li>
+    <span class="ellipse"></span>
+
+    <li>Prodevs</li>
+    <span class="ellipse"></span>
 
   </ul>
+  <!-- add css variables to the individual stylng 🚨 -->
+  <script defer>
+    const root = document.documentElement;
+        const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+        const marqueeContent = document.querySelector(".marquee-element");
+
+        root.style.setProperty("--marquee-elements", marqueeContent.children.length)
+        for (let i = 0; i < marqueeElementsDisplayed; i++) {
+            marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+        }
+  </script>
 </section>
 
 

@@ -10,8 +10,11 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  scroll-behavior: smooth;
   /* outline: 1px dashed rgba(128, 0, 128, 0.603); */
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -27,12 +30,21 @@
   --black-800: #000;
   font-size: 62.5%;
   --hero-max-width: 1173px;
+
+  --marquee-width:100vw;
+  --marquee-elements-displayed: 4;
+  --marquee-elements-width: calc(var(--marquee-width)/var(--marquee-elements-dislayed));
+  --marquee-animation-duration:calc(var(--marquee-elements)*2s);
 }
 
 body {
   font-family: "mada";
   font-size: 1.6rem;
   /* background-color: hsla(102, 43%, 72%, 1); */
+}
+
+section{
+  position: relative;
 }
 
 /* 🙋‍♂️ What does this do?? */
@@ -66,10 +78,7 @@ body {
   z-index: 0;
   background: linear-gradient(180deg, #ABD699 38.23%, rgba(255, 255, 255) 84.15%);
   height: 191vh;
-  max-height: 191vh;
-}
-section{
-  position: relative;
+  max-height: 1911px;
 }
 
 /*HEADER*/
@@ -272,6 +281,7 @@ section.section-1{
   display: flex;
   place-content: center;
   height: 100vh;
+  max-height: 830px;
   max-width: var(--hero-max-width);
   margin: 0 auto;
   /* padding: 10px 100px 0 102px; */
@@ -439,12 +449,14 @@ section.section-3 header h2 {
 section.section-3 p{
   /* width: 500px; */
   /* width:clamp(calc(100vw - 100px), 36.60vw, 500px); */
-  width: clamp(300px, 43.92vw, 600px);
   /*margin-top: clamp(300px, 3.92vw, 600px);*/ /* remove this in mobile */
+  width: clamp(300px, 43.92vw, 600px);
   margin-top: 109px; /* remove this in mobile */
   color: var(--black-300);
   font-size: 1.7rem;
 }
+
+
 
 
 /*****
@@ -454,19 +466,51 @@ section.section-3 p{
 section.section-4{
   width: 100%;
   margin: 244px 0;
+  cursor: default;
+  user-select: none;
+  /* max-width: calc(var(--hero-max-width)+200); doesn't work */
+  overflow: hidden;
 }
 
 section.section-4 ul{
   display: flex;
+  place-items: center;
+  gap: 25px;
+  animation: scrolling 160s linear infinite;
+}
+
+@keyframes scrolling {
+  0%{transform: translateX(0vw);}
+  100%{transform: translateX(-120vw);}
+}
+
+section.section-4 li {
+  font-size: 9.5rem;
+  text-transform: lowercase;
+}
+
+section.section-4 ul li:nth-of-type(even) {
+  color: #EEEEEE;
+}
+
+section.section-4 ul li:nth-of-type(odd) {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color:#d9d9d9;
+  -webkit-text-stroke-width: .7px;
 }
 
 section.section-4 .ellipse{
-box-sizing: border-box;
-width: 20px;
-height: 20px;
-background: #EEEEEE;
-border-radius: 20px;
+background-image: url(Image/ellipse.svg);
+background-repeat: no-repeat;
+background-position: center;
+min-height: 20px;
+min-width: 20px;
+margin-top: 10px;
 }
+
+
+
+
 
 /*****
 *section 5: our team 
